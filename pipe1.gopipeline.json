@@ -1,0 +1,38 @@
+{
+  "name": "pipe1",
+  "isLocked": false,
+  "environmentVariables": [],
+  "materials": [
+    {
+      "url": "https://github.com/tomzo/gocd-json-config-example.git",
+      "type": "git"
+    }
+  ],
+  "stages": [
+    {
+      "name": "build",
+      "fetchMaterials": true,
+      "artifactCleanupProhibited": false,
+      "cleanWorkingDir": false,
+      "environmentVariables": [],
+      "jobs": [
+        {
+          "name": "build",
+          "environmentVariables": [],
+          "tabs": [],
+          "resources": [],
+          "artifacts": [],
+          "artifactPropertiesGenerators": [],
+          "runOnAllAgents": false,
+          "runInstanceCount": 0,
+          "timeout": 0,
+          "tasks": [
+            {
+              "type": "rake"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
