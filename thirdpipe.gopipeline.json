@@ -8,7 +8,7 @@
       "type": "git"
     },
     {
-      "type": "dependency",
+      "type": "pipeline",
       "name": "dependency",
       "pipeline": "secondpipe",
       "stage": "build"
