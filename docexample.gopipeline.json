@@ -1,0 +1,89 @@
+{
+  "label_template": "${COUNT}",
+  "enable_pipeline_locking": false,
+  "name": "my_pipeline",
+  "group" : "configrepo-example",
+  "tracking_tool": null,
+  "timer": null,
+  "environment_variables": [],
+  "materials": [
+    {
+      "type": "git",
+      "url": "git@github.com:example/sample_repo.git",
+      "destination": "code",
+      "filter": {
+          "ignore": [
+                  "**/*.*",
+                  "**/*.html"
+          ]
+      },
+      "name": "git",
+      "auto_update": true,
+      "branch": "master",
+      "submodule_folder": null
+    }
+  ],
+  "stages": [
+    {
+      "name": "my_stage",
+      "fetch_materials": true,
+      "clean_working_directory": false,
+      "never_cleanup_artifacts": false,
+      "approval": {
+        "type": "success",
+        "roles": [],
+        "users": []
+      },
+      "environment_variables": [],
+      "jobs": [
+        {
+          "name": "my_job",
+          "run_instance_count": null,
+          "timeout": 0,
+          "environment_variables": [],
+          "resources": [
+                "Linux",
+                "Java"
+          ],
+          "tasks": [
+            {
+              "type": "exec",
+              "run_if": [
+                "passed"
+              ],
+              "on_cancel": {
+                "type": "exec",
+                "command": "ls",
+                "working_directory": null
+              },
+              "command": "sleep",
+              "arguments": [
+                "10"
+              ],
+              "working_directory": null
+            }
+         ],
+          "tabs": [
+            {
+              "name": "cobertura",
+              "path": "target/site/cobertura/*.xml"
+            }
+          ],
+          "artifacts": [
+            {
+              "source": "target",
+              "destination": "result",
+              "type": "build"
+            },
+            {
+              "source": "test",
+              "destination": "res1",
+              "type": "test"
+            }
+          ],
+          "properties": null
+        }
+      ]
+    }
+  ]
+}
