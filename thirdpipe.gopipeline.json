@@ -1,14 +1,14 @@
 {
   "name": "thirdpipe",
   "isLocked": false,
-  "environmentVariables": [],
+  "environment_variables": [],
   "materials": [
     {
       "url": "https://github.com/tomzo/gocd-json-config-example.git",
       "type": "git"
     },
     {
-      "type": "pipeline",
+      "type": "dependency",
       "name": "dependency",
       "pipeline": "secondpipe",
       "stage": "build"

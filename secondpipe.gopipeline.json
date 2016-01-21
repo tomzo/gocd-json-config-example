@@ -1,7 +1,7 @@
 {
   "name": "secondpipe",
-  "isLocked": false,
-  "environmentVariables": [],
+  "is_locked": false,
+  "environment_variables": [],
   "materials": [
     {
       "url": "https://github.com/tomzo/gocd-json-config-example.git",

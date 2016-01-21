@@ -1,7 +1,6 @@
 {
   "name": "firstpipe",
-  "isLocked": false,
-  "environmentVariables": [],
+  "environment_variables": [],
   "materials": [
     {
       "url": "https://github.com/tomzo/gocd-json-config-example.git",
@@ -11,20 +10,19 @@
   "stages": [
     {
       "name": "build",
-      "fetchMaterials": true,
-      "artifactCleanupProhibited": false,
-      "cleanWorkingDir": false,
-      "environmentVariables": [],
+      "fetch_materials": true,
+      "never_cleanup_artifacts": false,
+      "clean_working_directory": false,
+      "environment_variables": [],
       "jobs": [
         {
           "name": "build",
-          "environmentVariables": [],
+          "environment_variables": [],
           "tabs": [],
           "resources": [],
           "artifacts": [],
-          "artifactPropertiesGenerators": [],
-          "runOnAllAgents": false,
-          "runInstanceCount": 0,
+          "properties": [],
+          "run_instance_count": null,
           "timeout": 0,
           "tasks": [
             {
