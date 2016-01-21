@@ -1,11 +1,13 @@
 {
   "name": "thirdpipe",
+  "group" : "configrepo-example",
   "isLocked": false,
   "environment_variables": [],
   "materials": [
     {
       "url": "https://github.com/tomzo/gocd-json-config-example.git",
-      "type": "git"
+      "type": "git",
+      "name" : "mygit"
     },
     {
       "type": "dependency",

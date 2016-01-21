@@ -1,6 +1,7 @@
 {
   "name": "secondpipe",
   "is_locked": false,
+  "group" : "configrepo-example",
   "environment_variables": [],
   "materials": [
     {
