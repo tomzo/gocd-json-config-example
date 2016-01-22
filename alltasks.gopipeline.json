@@ -59,7 +59,17 @@
               "working_directory": "sample-project",
               "build_file": null,
               "target": null
-            }
+            },
+            {
+               "type": "fetch",
+               "run_if": "any",
+               "pipeline": "secondpipe",
+               "stage": "build",
+               "job": "build",
+               "is_source_a_file": false,
+               "source": "result",
+               "destination": "test"
+             }
           ]
         }
       ]
