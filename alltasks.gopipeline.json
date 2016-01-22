@@ -1,0 +1,46 @@
+{
+  "name": "alltasks",
+  "group" : "configrepo-example",
+  "isLocked": false,
+  "environment_variables": [],
+  "materials": [
+    {
+      "url": "https://github.com/tomzo/gocd-json-config-example.git",
+      "type": "git",
+      "name" : "mygit"
+    },
+    {
+      "type": "dependency",
+      "name": "dependency",
+      "pipeline": "secondpipe",
+      "stage": "build"
+    }
+  ],
+  "stages": [
+    {
+      "name": "build",
+      "jobs": [
+        {
+          "name": "build",
+          "tasks": [
+            {
+              "type": "rake"
+            },
+            {
+              "type": "exec",
+              "run_if": "passed",
+              "on_cancel" : null,
+              "command": "make",
+              "arguments": [
+                "-j3",
+                "docs",
+                "instal"
+              ],
+              "working_directory": null
+          }
+          ]
+        }
+      ]
+    }
+  ]
+}
