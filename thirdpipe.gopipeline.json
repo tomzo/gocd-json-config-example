@@ -1,7 +1,7 @@
 {
   "name": "thirdpipe",
   "group" : "configrepo-example",
-  "isLocked": false,
+  "enable_pipeline_locking": false,
   "environment_variables": [],
   "materials": [
     {
