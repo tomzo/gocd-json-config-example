@@ -54,7 +54,7 @@
           "tools"
         ]
       },
-      "destination": "dir1",
+      "destination": "dir23",
       "auto_update": false,
       "name": "hgMaterial1",
       "type": "hg"
@@ -71,7 +71,7 @@
           "tools"
         ]
       },
-      "destination": "dir1",
+      "destination": "dir1345",
       "auto_update": false,
       "name": "p4materialName",
       "type": "p4"
@@ -88,7 +88,7 @@
           "externals"
         ]
       },
-      "destination": "dir1",
+      "destination": "dir171",
       "auto_update": false,
       "name": "tfsMaterialName",
       "type": "tfs"
