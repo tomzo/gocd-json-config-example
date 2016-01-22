@@ -37,7 +37,29 @@
                 "instal"
               ],
               "working_directory": null
-          }
+            },
+            {
+              "build_file": "mybuild.xml",
+              "target": "compile",
+              "type": "ant",
+              "run_if": "any",
+              "on_cancel" : null,
+            },
+            {
+              "type": "nant",
+              "run_if": "passed",
+              "working_directory": "script/build/123",
+              "build_file": null,
+              "target": null,
+              "nant_path": null
+            },
+            {
+              "type": "rake",
+              "run_if": "passed",
+              "working_directory": "sample-project",
+              "build_file": null,
+              "target": null
+            }
           ]
         }
       ]
