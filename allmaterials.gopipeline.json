@@ -7,7 +7,8 @@
     {
       "url": "https://github.com/tomzo/gocd-json-config-example.git",
       "type": "git",
-      "name" : "mygit"
+      "name" : "mygit",
+      "destination" : "mydest"
     },
     {
       "type": "dependency",
