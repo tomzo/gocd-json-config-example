@@ -1,0 +1,33 @@
+{
+  "name": "fourthpipe",
+  "group" : "configrepo-example",
+  "enable_pipeline_locking": false,
+  "environment_variables": [],
+  "materials": [
+    {
+      "type": "configrepo",
+      "name" : "mygit"
+    },
+    {
+      "type": "dependency",
+      "name": "dependency",
+      "pipeline": "secondpipe",
+      "stage": "build"
+    }
+  ],
+  "stages": [
+    {
+      "name": "build",
+      "jobs": [
+        {
+          "name": "build",
+          "tasks": [
+            {
+              "type": "rake"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
