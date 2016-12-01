@@ -1,0 +1,38 @@
+{
+  "name": "elastic",
+  "environment_variables": [],
+  "group" : "configrepo-example",
+  "materials": [
+    {
+      "url": "https://github.com/tomzo/gocd-json-config-example.git",
+      "type": "git"
+    }
+  ],
+  "stages": [
+    {
+      "name": "build",
+      "fetch_materials": true,
+      "never_cleanup_artifacts": false,
+      "clean_working_directory": false,
+      "environment_variables": [],
+      "jobs": [
+        {
+          "name": "build",
+          "elastic_profile_id" : "example-docker",
+          "environment_variables": [],
+          "tabs": [],
+          "resources": [],
+          "artifacts": [],
+          "properties": [],
+          "run_instance_count": null,
+          "timeout": 0,
+          "tasks": [
+            {
+              "type": "rake"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
