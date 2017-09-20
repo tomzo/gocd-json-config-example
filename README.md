@@ -8,7 +8,7 @@ In order to import this configuration in your Go server.
 2. Add this to your cruise-config.xml configuration:
 ```xml
 <config-repos>
-   <config-repo plugin="json.config.plugin">
+   <config-repo pluginId="json.config.plugin" id="repo1">
      <git url="https://github.com/tomzo/gocd-json-config-example.git" />
    </config-repo>
 </config-repos>
