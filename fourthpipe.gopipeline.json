@@ -1,4 +1,5 @@
 {
+  "format_version" : 1,
   "name": "fourthpipe",
   "group" : "configrepo-example",
   "enable_pipeline_locking": false,
