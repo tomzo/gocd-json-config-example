@@ -8,13 +8,8 @@ In order to import this configuration in your Go server.
 2. Add this to your cruise-config.xml configuration:
 ```xml
 <config-repos>
-   <config-repo pluginId="json.config.plugin" id="repo1">
+   <config-repo pluginId="json.config.plugin" id="gocd-json-config-example">
      <git url="https://github.com/tomzo/gocd-json-config-example.git" />
    </config-repo>
 </config-repos>
 ```
-
-## Notes
-
-This is suited to run on development server. The `dev` environment declares `up42` as pipeline members.
-If you don't have `up42` pipeline defined in cruise-config.xml then add one.
