@@ -1,5 +1,6 @@
 # gocd-json-config-example
-Example Go configuration repository with json configuration
+
+Example GoCD configuration repository with json configuration.
 
 ## Server configuration
 
